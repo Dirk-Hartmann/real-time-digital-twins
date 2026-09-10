@@ -1,0 +1,10 @@
+.vscode
+
+/data/*
+!/data/README.md
+
+/exercises/*
+!/exercises/README.md
+!/exercises/ml_exercises.md
+!/exercises/rom_exercises.md
+!/exercises/uq_exercises.md
