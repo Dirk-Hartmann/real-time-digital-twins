@@ -43,8 +43,13 @@ For detailed documentation, see the corresponding documents in [docs/](docs/READ
 To support agentic software development, for example using GitHub Copilot ([GitHub Education](https://github.com/education/students)), corresponding project guidelines ([`copilot-instructions.md`](.github/copilot-instructions.md)) are included. I recommend trying Copilot to explore the provided algorithms through the exercises or your own examples. Please keep in mind that this does not replace the responsibility of understanding the algorithms in detail, [for the greater good](https://www.nature.com/articles/s44271-026-00402-1).
 
 
-## References
+## Courses
+Selected courses in which the examples have been used:
+* [*Real-time Algorithms for Digital Twins*](https://www.ukacm-school.uk/) at the UKACM Autumn School 2026 *Beyond Data-Driven Digital Twins: Integrating AI with Computational Mechanics*
+*  [*Computational Methods for (Real-time) Digital Twins*](https://moodle.tu-darmstadt.de/course/info.php?id=45801&lang=en) at TU Darmstadt (2025-today)
 
+
+## References
 1. Vetterling, William T. [Numerical recipes example book (c++): The art of scientific computing](https://numerical.recipes/). Cambridge University Press, 2002.
 2.  Sigmund, Ole. ["A 99 line topology optimization code written in Matlab."](https://www.topopt.mek.dtu.dk/apps-and-software/a-99-line-topology-optimization-code-written-in-matlab) Structural and multidisciplinary optimization 21.2 (2001): 120-127.
 3. Andreassen, Erik, et al. ["Efficient topology optimization in MATLAB using 88 lines of code."](https://www.topopt.mek.dtu.dk/apps-and-software/efficient-topology-optimization-in-matlab) Structural and Multidisciplinary Optimization 43.1 (2011): 1-16.<br>
