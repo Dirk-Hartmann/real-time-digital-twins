@@ -103,3 +103,10 @@ Each script loads the training trajectories with [`split_trajectories`](../util/
 
 - [Lorenz_poly_autoregressive.jl](../scripts/ml/Lorenz_poly_autoregressive.jl): repeats the autoregressive recipe for the polynomial model.
 
+
+## References
+
+1. Asch, Mark. [*A toolbox for digital twins: from model-based to data-driven*](https://doi.org/10.1137/1.9781611976977). Society for Industrial and Applied Mathematics, 2022. 
+2. Brunton, Steven L., and J. Nathan Kutz. [*Data-driven science and engineering." Machine learning, dynamical systems, and control*](https://databookuw.com/). Cambridge University Press, 2019.
+3. Zhuang, Qinyu, et al. "[Model order reduction based on Runge–Kutta neural networks.](https://doi.org/10.1017/dce.2021.15)" *Data-Centric Engineering* 2 (2021): e13.
+

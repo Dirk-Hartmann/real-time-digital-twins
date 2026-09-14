@@ -48,3 +48,8 @@ where $\tilde{x}$ is the model's own rollout from $x_0$ and $x^{s+1:s+L}$ the tr
 - [PCB_OperatorInference_GPErrorEstimator.jl](../exercises/uq/PCB_OperatorInference_GPErrorEstimator.jl): applies the exact same two algorithms to a **driven** reduced-order model - the operator-inference ROM of [PCB_OperatorInference.jl](../scripts/rom/PCB_OperatorInference.jl), using `rollout_chunk_errors`'s `U` argument to thread each PCB simulation's own recorded drive through the rollout. See [uq_exercises.md](../exercises/uq_exercises.md#exercise-1--a-gaussian-process-error-estimator-for-the-operator-inference-rom) for the full write-up.
 
 
+## References
+
+1. Zhuang, Qinyu, et al. "[Active-learning-based nonintrusive model order reduction.](https://doi.org/10.1017/dce.2022.39)" *Data-Centric Engineering* 4 (2023): e2. 
+2. Wang, Yan, Anh V. Tran, and David L. McDowell. [*Fundamentals of Uncertainty Quantification for Engineers: Methods and Models*](https://doi.org/10.1016/C2022-0-02115-2). Elsevier, 2025. 
+3. Williams, Christopher KI, and Carl Edward Rasmussen. [*Gaussian processes for machine learning*](https://gaussianprocess.org/). MIT press, 2006. 

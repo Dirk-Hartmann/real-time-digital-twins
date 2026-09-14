@@ -1,8 +1,8 @@
 # Algorithms for Real-time Digital Twins
 
-A curated collection of compact, educational algorithms in the [Julia Programming Language](https://julialang.org/) illustrating core numerical methods for real-time digital twins. The collection forms the core of my lecture on *Algorithms for Real-time Digital Twins*. It focuses on dynamical systems, including ordinary and partial differential equations, as well as model order reduction and data-driven discovery modeling. The algorithms are demonstrated through a set of simplified examples. All examples are self-contained, minimal, and designed for classroom use. The emphasis is on simplicity rather than completeness or effectiveness; for example, consistently simple first- or second-order time-stepping schemes are used.
+A curated collection of compact, educational algorithms in the [Julia Programming Language](https://julialang.org/) illustrating core numerical methods for real-time digital twins [1,2,3]. The collection forms the core of my lecture on *Algorithms for Real-time Digital Twins*. It focuses on dynamical systems, including ordinary and partial differential equations, as well as model order reduction and data-driven discovery modeling. The algorithms are demonstrated through a set of simplified examples. All examples are self-contained, minimal, and designed for classroom use. The emphasis is on simplicity rather than completeness or effectiveness; for example, consistently simple first- or second-order time-stepping schemes are used.
 
-The collection is inspired by the famous *99-line* [2] and *88-line* [3] topology optimization papers, as well as the *Numerical Recipes* series [1]. Many examples are also inspired by [4, 5].
+The collection is inspired by the famous *99-line* [4] and *88-line* [5] topology optimization papers, as well as the *Numerical Recipes* series [6]. Many examples are also inspired by [7, 8].
 
 <table>
 	<tr>
@@ -40,25 +40,31 @@ For detailed documentation, see the corresponding documents in [docs/](docs/READ
 
 
 ## Agentic Software Development
+
 To support agentic software development, for example using GitHub Copilot ([GitHub Education](https://github.com/education/students)), corresponding project guidelines ([`copilot-instructions.md`](.github/copilot-instructions.md)) are included. I recommend trying Copilot to explore the provided algorithms through the exercises or your own examples. Please keep in mind that this does not replace the responsibility of understanding the algorithms in detail, [for the greater good](https://www.nature.com/articles/s44271-026-00402-1).
 
 
 ## Courses
+
 Selected courses in which the examples have been used:
 * [*Real-time Algorithms for Digital Twins*](https://www.ukacm-school.uk/) at the UKACM Autumn School 2026 *Beyond Data-Driven Digital Twins: Integrating AI with Computational Mechanics*
 *  [*Computational Methods for (Real-time) Digital Twins*](https://moodle.tu-darmstadt.de/course/info.php?id=45801&lang=en) at TU Darmstadt (2025-today)
 
 
 ## References
-1. Vetterling, William T. [Numerical recipes example book (c++): The art of scientific computing](https://numerical.recipes/). Cambridge University Press, 2002.
-2.  Sigmund, Ole. ["A 99 line topology optimization code written in Matlab."](https://www.topopt.mek.dtu.dk/apps-and-software/a-99-line-topology-optimization-code-written-in-matlab) Structural and multidisciplinary optimization 21.2 (2001): 120-127.
-3. Andreassen, Erik, et al. ["Efficient topology optimization in MATLAB using 88 lines of code."](https://www.topopt.mek.dtu.dk/apps-and-software/efficient-topology-optimization-in-matlab) Structural and Multidisciplinary Optimization 43.1 (2011): 1-16.<br>
-4. Steven L. Brunton and J. Nathan Kutz, ["Data-Driven Science and Engineering: Machine Learning, Dynamical Systems, and Control."](https://doi.org/10.1017/9781108380690) Cambridge University Press.
-5. Marc Asch, ["A Toolbox for Digital Twins: From Model-Based to Data-Driven."](https://doi.org/10.1137/1.9781611976977) SIAM Mathematics in Industry.
+1. Hartmann, Dirk, and Herman Van der Auweraer. "[Digital Twins-a golden age for industrial mathematics.](https://doi.org/10.1186/s13362-025-00170-3)" *Journal of Mathematics in Industry* 15.1 (2025): 6.
+2. Hartmann, Dirk, Matthias Herz, and Utz Wever. "[Model order reduction a key technology for digital twins.](https://doi.org/10.1007/978-3-319-75319-5_8)" *Reduced-Order Modeling (ROM) for Simulation and Optimization: Powerful Algorithms as Key Enablers for Scientific Computing*. Cham: Springer International Publishing, 2018. 167-179. 
+3. Hartmann, Dirk. "[Real-time digital twins.](https://doi.org/10.5281/zenodo.5470479)" *arXiv preprint arXiv:2311.14691* (2023). 
+4.. Sigmund, Ole. "[A 99 line topology optimization code written in Matlab.](https://doi.org/10.1007/s001580050176)" *Structural and multidisciplinary optimization* 21.2 (2001): 120-127. 
+5.. Andreassen, Erik, et al. "[Efficient topology optimization in MATLAB using 88 lines of code.](https://doi.org/10.1007/s00158-010-0594-7)" Structural and Multidisciplinary Optimization 43.1 (2011): 1-16. 
+6.. Vetterling, William T. [*Numerical recipes example book (c++): The art of scientific computing*](https://numerical.recipes/). Cambridge University Press, 2002. 
+7.. Brunton, Steven L., and J. Nathan Kutz. [*Data-driven science and engineering - Machine learning, dynamical systems, and control*](https://databookuw.com/). Cambridge University Press, 2019.
+8. Asch, Mark. [*A toolbox for digital twins: from model-based to data-driven*](https://doi.org/10.1137/1.9781611976977). Society for Industrial and Applied Mathematics, 2022. 
+
 
 ## Contact
 
-Prof. Dr. Dirk Hartmann
+Prof. Dr. Dirk Hartmann<br>
 TU Darmstadt, ETIT<br>
 Schlossgartenstraße 8 (S2|17)<br>
 64289 Darmstadt

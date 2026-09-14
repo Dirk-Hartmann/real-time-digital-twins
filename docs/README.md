@@ -5,7 +5,7 @@ Detailed write-ups of the algorithms in this collection: the governing equations
 ## Documents
 
 | Topic | File | Description |
-| 
+| :--- | :--- | :--- |
 | **Ordinary Differential Equations** | [ode.md](ode.md) | Lorenz, Duffing, and Rössler systems; the shared `ODEModel` interface and linearly-implicit trapezoidal time stepping |
 | **Partial Differential Equations** | [pde.md](pde.md) | PCB and SLM heat conduction; the shared `PDEModel` interface, finite element / finite volume discretisation, and boundary conditions |
 | **Reduced-Order Modelling** | [rom.md](rom.md) | Dimension reduction (POD, autoencoders) and dimension + model reduction (Krylov, POD + Galerkin, operator inference) for the PCB heat problem |

@@ -2,6 +2,7 @@
 
 This document describes the concept of reduced-order modelling (ROM) as applied to the example of the transient PCB heat problem, i.e., a simple linear time-invariant setting however not restricted to it. It builds on the full-order discretisation documented in [pde.md](pde.md).
 
+
 ## Contents
 
 - [Motivation and setting](#motivation-and-setting)
@@ -9,6 +10,7 @@ This document describes the concept of reduced-order modelling (ROM) as applied 
 - [Dimension reduction](#dimension-reduction)
 - [Dimension + model reduction](#dimension--model-reduction)
 - [Scripts](#scripts)
+
 
 ## Motivation and setting
 
@@ -31,6 +33,7 @@ that reproduces the input–output behaviour at a fraction of the cost. The algo
   <img src="../results/rom/PCB_PODGalerkinROM.png" alt="POD-Galerkin ROM vs full transient: solution, difference, error over time, input signals" height="300">
 </p>
 
+
 ## The reduced-model interface
 
 [algorithms/rom/ReducedModel.jl](../algorithms/rom/ReducedModel.jl) defines the shared `ReducedModel` returned by every ROM, it holds **only** the struct. It bundles a set of `params` with three maps that all take those parameters **explicitly** as their first argument:
@@ -50,6 +53,7 @@ Keeping the parameters in a separate argument is deliberate: for the projection 
 ### Reduced time integration
 
 The predictor advances the reduced state by one **Euler** step of the requested size $\delta t$. The comparison scripts inline this rollout: they encode the initial full state $x_0$, roll `predict` forward over `ts`, and decode the whole reduced trajectory back to the full space in a single `decode` call, returning an $n\times T$ matrix. Thereby, the full-order **reference** is not recomputed: it is read back from one simulation of the training ensemble stored in `data/PCB_training.bson`.
+
 
 ## Dimension reduction
 
@@ -103,6 +107,7 @@ with the same `Optimization` + `Zygote` setup as the ODE training strategies; th
 #### Convolutional variant
 
 [algorithms/rom/AE-CNN-Reduction.jl](../algorithms/rom/AE-CNN-Reduction.jl) builds the same `DimReduction` interface from a **convolutional** encoder/decoder pair instead of dense layers, so the maps act directly on the field reshaped to its $(n_y\times n_x)$ grid rather than on a POD coordinate vector. A single strided convolution downsamples the field to a small feature map (kept as the only full-resolution convolution, for speed), optionally refined there by cheap same-resolution convolutions and flattened to the dense bottleneck; the decoder mirrors this and upsamples back to the grid (bilinear interpolation, avoiding the checkerboard artefacts of transposed convolutions) before a final full-resolution convolution to one channel. `CNN_autoencoder(; g, latent, …)` builds the pair, and `train_CNN_autoencoder` fits it by gradient descent on the reconstruction loss, mirroring `train_POD_autoencoder` but kept self-contained here.
+
 
 ## Dimension + model reduction
 
@@ -160,6 +165,7 @@ $$
 
 the same polynomial ansatz used for the learned Lorenz models (see [ml.md](ml.md)): a linear term $Az$, an optional quadratic term $H q(z)$ built from the reduced coordinates' own monomials, and a linear control term $Cu$. The operators $(A, H, C)$ are fitted in one shot by ordinary least squares (`train_model_leastsquares`, [LeastSquaresTraining.jl](../algorithms/ml/LeastSquaresTraining.jl)) against first-order finite-difference derivative estimates of the reduced trajectory - the same regression used to train the polynomial Lorenz model, just applied to reduced coordinates instead of physical states. Because the PCB heat equation is itself linear, the fitted operators are dominated by $A$ and $C$, with the quadratic term $H \approx 0$ recovered as a check that the identification is not overfitting spurious nonlinearity. Unlike Krylov/POD-Galerkin, the resulting reduced model is only as good as its training trajectory and derivative estimates - a **data-driven** surrogate, not a provably moment- or energy-optimal projection.
 
+
 ## Scripts
 
 All scripts build the grid and operators from the PCB geometry images and compare against a reference trajectory of `data/PCB_training.bson`; figures land in `results/rom/`:
@@ -175,4 +181,16 @@ All scripts build the grid and operators from the PCB geometry images and compar
 - [PCB_PODGalerkinROM.jl](../scripts/rom/PCB_PODGalerkinROM.jl): builds a POD + Galerkin ROM from the stored snapshot trajectory and drives it with the same signals; the POD truncation error is written separately to `results/rom/PCB_PODGalerkinROM_singular_values.png`.
 
 - [PCB_OperatorInference.jl](../scripts/rom/PCB_OperatorInference.jl): fits the reduced polynomial operators $(A, H, C)$ from data alone by one-shot least squares and marches the learned model under the recorded drives.
+
+
+## References
+
+1. Benner, Peter, et al. [*Model order reduction Volume 1: System and Data-driven Methods and Algorithms*](https://doi.org/10.1515/9783110498967). De Gruyter, 2020.  
+2. Benner, Peter, et al. [*Model order reduction - Volume 2: Snapshot-based methods and algorithms*](ttps://doi.org/10.1515/9783110671490). De Gruyter, 2020. 
+3. Benner, Peter, et al. [*Model order reduction - Volume 3: Applications*](https://doi.org/10.1515/9783110499001). De Gruyter, 2020. 
+4. Brunton, Steven L., and J. Nathan Kutz. [*Data-driven science and engineering." Machine learning, dynamical systems, and control*](https://databookuw.com/). Cambridge University Press, 2019.
+5. Hartmann, Dirk, and Lukas Failer. "[A differentiable solver approach to operator inference.](https://doi.org/10.48550/arXiv.2107.02093)" *arXiv preprint arXiv:2107.02093* (2021).
+6. Uy, Wayne Isaac Tan, Dirk Hartmann, and Benjamin Peherstorfer. "[Operator inference with roll outs for learning reduced models from scarce and low-quality data.](https://doi.org/10.1016/j.camwa.2023.06.012)" *Computers & Mathematics with Applications* 145 (2023): 224-239. 
+7. Zhuang, Qinyu, et al. "[Model order reduction based on Runge–Kutta neural networks.](https://doi.org/10.1017/dce.2021.15)" *Data-Centric Engineering* 2 (2021): e13.
+
 

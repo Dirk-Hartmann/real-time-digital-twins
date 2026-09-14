@@ -170,5 +170,3 @@ animated GIF that traces the state through the phase plane. All outputs land in
 - [Lorenz_training_data.jl](../scripts/ode/Lorenz_training_data.jl): additionally samples 100 Lorenz
 trajectories from random initial conditions for the learned models of [ml.md](ml.md).
 
-
-
