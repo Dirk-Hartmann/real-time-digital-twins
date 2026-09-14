@@ -55,11 +55,11 @@ Selected courses in which the examples have been used:
 1. Hartmann, Dirk, and Herman Van der Auweraer. "[Digital Twins-a golden age for industrial mathematics.](https://doi.org/10.1186/s13362-025-00170-3)" *Journal of Mathematics in Industry* 15.1 (2025): 6.
 2. Hartmann, Dirk, Matthias Herz, and Utz Wever. "[Model order reduction a key technology for digital twins.](https://doi.org/10.1007/978-3-319-75319-5_8)" *Reduced-Order Modeling (ROM) for Simulation and Optimization: Powerful Algorithms as Key Enablers for Scientific Computing*. Cham: Springer International Publishing, 2018. 167-179. 
 3. Hartmann, Dirk. "[Real-time digital twins.](https://doi.org/10.5281/zenodo.5470479)" *arXiv preprint arXiv:2311.14691* (2023). 
-4.. Sigmund, Ole. "[A 99 line topology optimization code written in Matlab.](https://doi.org/10.1007/s001580050176)" *Structural and multidisciplinary optimization* 21.2 (2001): 120-127. 
-5.. Andreassen, Erik, et al. "[Efficient topology optimization in MATLAB using 88 lines of code.](https://doi.org/10.1007/s00158-010-0594-7)" Structural and Multidisciplinary Optimization 43.1 (2011): 1-16. 
-6.. Vetterling, William T. [*Numerical recipes example book (c++): The art of scientific computing*](https://numerical.recipes/). Cambridge University Press, 2002. 
-7.. Brunton, Steven L., and J. Nathan Kutz. [*Data-driven science and engineering - Machine learning, dynamical systems, and control*](https://databookuw.com/). Cambridge University Press, 2019.
-8. Asch, Mark. [*A toolbox for digital twins: from model-based to data-driven*](https://doi.org/10.1137/1.9781611976977). Society for Industrial and Applied Mathematics, 2022. 
+4. Sigmund, Ole. "[A 99 line topology optimization code written in Matlab.](https://doi.org/10.1007/s001580050176)" *Structural and multidisciplinary optimization* 21.2 (2001): 120-127.  
+5. Andreassen, Erik, et al. "[Efficient topology optimization in MATLAB using 88 lines of code.](https://doi.org/10.1007/s00158-010-0594-7)" Structural and Multidisciplinary Optimization 43.1 (2011): 1-16.  
+6. Vetterling, William T. [*Numerical recipes example book (c++): The art of scientific computing*](https://numerical.recipes/). Cambridge University Press, 2002.  
+7. Brunton, Steven L., and J. Nathan Kutz. [*Data-driven science and engineering - Machine learning, dynamical systems, and control*](https://databookuw.com/). Cambridge University Press, 2019. 
+8. Asch, Mark. [*A toolbox for digital twins: from model-based to data-driven*](https://doi.org/10.1137/1.9781611976977). Society for Industrial and Applied Mathematics, 2022.  
 
 
 ## Contact
